@@ -22,9 +22,7 @@ const animation = (duration: number, distance: number) => defer(() => {
 const button = document.querySelector("#animationBtn")
 fromEvent(button, 'click')
   .pipe(
-    mergeMap(div => animation(1000, 800)),
-    // switchMap(div => animation(1000, 800)),
-    // concatMap(div => animation(1000, 800))
+    mergeMap(div => animation(1000, 800))
   ).subscribe()
 
 animation(2000, 300).subscribe()
